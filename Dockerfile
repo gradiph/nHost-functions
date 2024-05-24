@@ -30,7 +30,7 @@ RUN apk update && apk upgrade && \
     apk add --no-cache git openssh python3 make g++
 
 # * Install packages that are required for this docker image to run
-RUN npm install -g pnpm nodemon express@$EXPRESS_VERSION morgan glob@8.1.0 tsx @antfu/ni
+RUN npm install -g pnpm nodemon express@$EXPRESS_VERSION morgan glob@8.1.0 tsx @antfu/ni csv-parse xlsx stream
 
 # * The pnpm store should be mounted in the same volume as node_modules (requires hard links)
 # * See https://pnpm.io/6.x/npmrc#store-dir
